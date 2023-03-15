@@ -1,8 +1,9 @@
 {
-  "name": "Watcher",
+  "manifest_version": 3,
+  "name": "Fave Binge",
   "description": "Get personalized recommendations for all your favourite OTT platforms.",
   "version": "1.0",
-  "manifest_version": 2,
+  "author": "Ishani Kathuria",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
@@ -15,5 +16,16 @@
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
-  }
+  },
+  "host_permissions": [
+    "*://*.amazon.co.jp/*",
+    "*://*.amazon.co.uk/*",
+    "*://*.amazon.com/*",
+    "*://*.amazon.de/*",
+    "*://*.disneyplus.com/*",
+    "*://*.hotstar.com/*",
+    "*://*.hulu.com/*",
+    "*://*.netflix.com/*",
+    "*://*.primevideo.com/*"
+  ]
 }
