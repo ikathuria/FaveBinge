@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>PyScript Hello World</title>
-        <py-config>
-            [[runtimes]]
-            src = "runtime/pyodide.js"
-            name = "pyodide-0.21.3"
-            lang = "python"
-        </py-config>
-        <link rel="icon" type="image/png" href="images/icon-128.png" />
-        <link rel="stylesheet" href="runtime/pyscript.css" />
-        <script defer src="runtime/pyscript.js"></script>
-    </head>
-    <body>
-        Hello world!<br>
-        <!-- Deliberately breaking indendation for easy Copy/Paste of Python code -->
-        <py-script>
-            from datetime import datetime
 
-            print("This is the current date and time, as computed by Python:")
-            now = datetime.now()
-            now.strftime("%m/%d/%Y, %H:%M:%S")
-        </py-script>
-    </body>
-    <script src="finished.js"></script>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+			shrink-to-fit=no">
+		<meta name="description" content="Get personalized recommendations for all
+			your favourite OTT platforms.">
+		<meta name="author" content="Ishani Kathuria">
+
+		<!-- favicon and title -->
+		<link rel="icon" type="image/png" href="images/icon-128.png">
+		<title>FaveBinge | Chrome Extension</title>
+
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
+			rel="stylesheet">
+
+		<!-- Bootstrap & jQuery -->
+		<link href="runtime/bootstrap.min.css" rel="stylesheet">
+
+		<!-- PyScript -->
+		<link rel="stylesheet" href="runtime/pyscript.css" />
+		<script defer src="runtime/pyscript.js"></script>
+		<script defer src="runtime/pyodide.js"></script>
+
+		<!-- Additional Files -->
+		<link rel="stylesheet" href="assets/styles.css">
+		<script defer src="assets/components.js"></script>
+		<script src="runtime/fontawesome.js"></script>
+
+	</head>
+
+	<body>
+		<py-config>		
+			[[interpreters]]
+			src = "runtime/pyodide/pyodide.js"
+			name = "pyodide-0.22.1"
+			lang = "python"
+		</py-config>
+
+		Hello world!<br>
+		<py-script>
+			from datetime import datetime
+
+			display("This is the current date and time, as computed by Python: ")
+			now = datetime.now()
+			now = now.strftime("%m/%d/%Y, %H:%M:%S")
+			display(now)
+
+		</py-script>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="runtime/jquery-3.6.3.js"></script>
+		<script src="runtime/popper.min.js"></script>
+		<script src="runtime/bootstrap.min.js"></script>
+
+	</body>
+
 </html>
