@@ -1,0 +1,19 @@
+{
+  "name": "Watcher",
+  "description": "Get personalized recommendations for all your favourite OTT platforms.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon-128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
